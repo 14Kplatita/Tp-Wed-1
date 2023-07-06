@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="main.css">
+		<title>La Evolucion De Las Tarjetas De Video</title>
+    </head>
+      <body>
+            <nav class="menu">
+				<button class="nav-buton" onclick="accion()">menu</button>
+				<a href="index.html" class="nav-enlace desaparece">Inicio</a>
+                <a href="Geforce.html" class="nav-enlace desaparece">Geforce</a>
+				<a href="Radeon.html" class="nav-enlace desaparece">Radeon HD</a>
+				<a href="Voodoo.html" class="nav-enlace desaparece">Voodoo</a>
+				<a href="formulario.html" onclick="cambia_de_pagina()" class="nav-enlace desaparece">Registro</a>
+			
+			</nav>
+         
+     
+          <main class="container"></main>
+
+            <footer class="footer container">
+            <p>
+                <small>sitio diseñado por kEnAi</small>
+            </p>
+  </footer>
+<script>
+  function cambia_de_pagina(){
+    location.href="formulario.html"
+  }
+</script>
+  <script>
+      const d = document,
+  $main = d.querySelector("main");
+
+const getHTML = (options) =>{
+    let {url,success,error} = options;
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", e =>{
+        if (xhr.readyState !==4)return;
+        if (xhr.status >= 200 && xhr.status < 300){
+            let html =xhr.responseText;
+            success(html);
+        }else{
+            let message = xhr.statusText||"error";
+            error(`error ${xhr.status}: ${message}`);
+        }
+    });
+    
+    
+    xhr.open("GET",url);
+    xhr.setRequestHeader("content-type","text/html; charset=utf-8");
+    xhr.send();
+}
+
+    getHTML({
+        url: "index.html",
+        success:(html) => $main.innerHTML = html,
+        error: (err) => $main.innerHTML = `<h1>${err}</h1>`
+    });
+
+
+d.addEventListener("click",e =>{
+    if(e.target.matches(".menu a")){
+        e.preventDefault();
+        getHTML({
+            url: e.target.href,
+            success:(html) => $main.innerHTML = html,
+            error: (err) => $main.innerHTML = `<h1>${err}</h1>`
+        });
+    }
+});
+    /* **********     Curso JavaScript: 122. Ejercicios AJAX - APIs: Sitio web con AJAX - #jonmircha     ********** */
+  </script>
+          		<script type="text/javascript" src="main.js"></script>
+      </body>
+    
+</html>

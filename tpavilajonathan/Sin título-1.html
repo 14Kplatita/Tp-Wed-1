@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>JS Bin</title>
+    </head>
+    <body>
+      <input id="api" type="text">
+      <div id="texto"></div>
+    <script>
+    
+    let busqueda = document.getElementById("api")
+    
+    function hola(id) {
+      busqueda.addEventListener("keyup", () => {
+    
+          fetch(`https://636da50391576e19e32c746b.mockapi.io/usuarios/${id.value}`)
+          .then(response => response.json())
+          .then(data => {
+    
+              let element = document.getElementById('element')
+              document.getElementById("texto").innerHTML = JSON.stringify(data)
+    
+              console.log(data)
+          })
+          .catch(err => console.log(err))
+    
+    })
+    }
+      
+    hola(busqueda)
+    
+    
+        
+    </script>
+    </body>
+    </html>

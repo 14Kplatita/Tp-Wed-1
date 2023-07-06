@@ -1,0 +1,249 @@
+.nav-enlace{
+	display: inline-block;
+	text-decoration: none;
+	background: blue;
+	color: #fff;
+	padding: 10px 30px;
+}
+
+.nav-enlace:hover{
+	
+	background-color: darkturquoise;
+
+}
+
+nav{
+	background-color: darkblue;
+	display: flex;
+	justify-content: flex-start;
+	padding: 10px ;
+	
+}
+
+.nav-buton{
+	background: blue;
+	color: #fff;
+	padding: 10px;
+	display: none;
+	
+}
+
+/* de 1 a 31 barra del sitio*/
+
+.pagina{ /*cuerpo de la pagina*/
+	width: 75%;
+	margin: auto;
+	border-radius: 5px;
+	background: #fff;
+	padding: 20px;
+	border:1px solid;
+}
+
+body{
+	/*background: #f6f6f6;*/
+	background-image: url(HD-wallpaper-technology-circuit.jpg)
+
+}
+
+.amigo img{ /* para las imagenes de muestra*/
+	image-orientation: left;
+	float: right;
+    padding: 10px;
+}
+
+img{ 
+	padding: 5px 5px 10px 5px;
+	width: 35%;
+	background: #f8f9fa;
+	border: 1px solid #c8ccd1;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+.table{
+	overflow-x:auto;
+    display: flex;
+    justify-content: center;
+   
+}
+
+table{/*para la tablas de las paginas*/
+	background:#c8ccd1;
+}
+
+td{
+	border: 1px solid black;
+	background: #f8f9fa;
+}
+
+.form{ /*aca empieza el formulario*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.registro{
+	width: 400px;
+	background: #24303c;
+	padding: 30px;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 4px;
+	color: white;
+}
+
+.registro a {
+	color: white;
+	text-decoration: none;
+}
+
+.registro a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.registro h4{
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.control{
+	width: 95%;
+	background: #24303c;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid #1f53c5;
+	font-size: 18px;
+	color: white;
+}
+
+.registro .button{
+	width: 100%;
+	background: #1f53c5;
+	border: none;
+	padding: 10px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}
+
+.registro .button:hover{
+    background-color: darkturquoise;
+}
+
+
+.REST{
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.buttonREST{
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    background: #1f53c5;
+    color: white;
+}
+
+.buttonREST:hover{
+    background-color: darkturquoise;
+}
+
+/*aca termina el formulario*/
+
+.contenedor { /*intento de estilo para el capcha*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027)
+}
+
+.input{
+	padding: 5px;
+}
+
+input{
+    width: 100%;
+	margin-bottom: 3px;
+}
+
+.errCaptcha{
+	display: flex;
+	justify-content:space-around;
+	padding: 5px;
+	border-radius: 5px;
+	background: #2c5364;
+}
+
+
+.captcha {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 3px;
+  border-radius: 5px;
+  text-decoration: line-through;
+  color: #a0a0a0;
+  background-color: #0c0c0c;
+}
+
+.errmsg {
+  color: white;
+  padding: 5px;
+  transition: 0.5s ease;
+}
+/*aca termina el estilo de capcha*/
+
+
+
+@media (max-width:550px){ /*para el cuerpo de la pagina y las imagenes*/
+	.pagina{
+		width: auto;
+	}
+    .registro{
+        width: auto;
+    }
+	.amigo img{
+		image-orientation: right;
+		float: inherit;
+	}
+	img{ 
+		width: 70%;
+	}
+	.table{
+		overflow:scroll;
+	}
+    .modficar{
+        flex-direction: column;
+        padding: 5px;
+    }
+}
+	
+	
+@media (max-width:550px){ /*para el resposive del menu*/
+	nav{
+		flex-direction: column;
+		padding: 10px;
+	}
+	
+	.nav-buton{
+		display: inline-block;
+	}
+	
+	/*.nav-enlace{
+		width: 75%;
+	}*/
+	
+	.desaparece{
+		display: none;
+	}
+}
+
+
+

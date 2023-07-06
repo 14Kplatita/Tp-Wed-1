@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="main.css">
+		<title>Registro</title>
+	</head> 
+	<body>
+		<div>	      
+           	<nav>
+				<button class="nav-buton" onclick="accion()">menu</button>
+				<a href="inicio.html" class="nav-enlace desaparece">Inicio</a>
+			
+			</nav> 
+		</div>
+        
+		<div class="form">
+		<section class="registro">
+			<h4>Formulario de Registro</h4>
+			<input class="control" type="text" id="name" placeholder="Ingrese su Nombre"> 
+			<input class="control" type="text" id="apellido" placeholder="Ingrese su Apellido"> 
+			<input class="control" type="email" id="email" placeholder="Ingrese su Correo"> 
+			<input class="control" type="password" id="password" placeholder="Contraseña"> 
+			
+			<div class="contenedor">
+			<div id="captcha" class="captcha"><script>createCaptcha();</script></div>
+			<div class="restart">
+			<a href="#" class="change" onclick="createCaptcha()">Cambiar</a>
+			</div>
+				<div class="input">
+					<input
+						   type="text"
+						   name="reCaptcha"
+						   id="reCaptcha"
+						   placeholder="Ingrese el capcha"/>
+					</div>
+         			<div>
+						<input type="button"  value="Verificar" onclick="validateCaptcha()" />
+					</div>
+					
+					<div>
+						<div id="errCaptcha" class="errmsg"></div>
+					</div>
+	  		</div>
+			<button type="button" class="button" id="registar" name="button"> registar</button>
+		      </section>
+		
+		      </div>
+            
+         <div class="pagina">
+        
+        <h1>trabla de Usuarios</h1>
+          <div class="table">
+	       <table width="600" id="lista_nombres" border="1px" >
+               <thead>
+			     <tr>
+					<th>ID</th>
+				    <th>nombre</th>
+				    <th>apellido</th>
+				    <th>email</th>
+				    <th>contraseña</th>
+			     </tr>
+		      </thead>
+		      <tbody  id="tabla" border="1px">
+                
+		      </tbody>
+	       </table>
+              </div>
+
+		   <h2>cambiar</h2>
+		<div class="modificar">
+		   <input class="REST" type="text" id="ID" placeholder="ID">
+		   <input class="REST" type="text" id="NAME" placeholder="Nuevo nombre">
+		   <input class="REST" type="text" id="APELLIDO" placeholder="apellido">
+		   <input class="REST" type="text" id="EMAIL" placeholder="email">
+		   <input class="REST" type="text" id="PASSWORD" placeholder="password">
+		</div>
+		   <button class="buttonREST" type="button" id="cambiar" name="button">cambiar</button>
+		   <div id="result1">
+
+		   </div> 
+	   
+		   <h2>borrar</h2>
+		   <input class="REST" type="text" id="eliminar" placeholder="ID">
+		   <button class="buttonREST" type="button" id="delete" name="button">borrar</button>
+		   <div id="result">
+
+		   </div>
+
+        </div>
+						
+		<script type="text/javascript" src="main.js"></script>
+       
+
+	</body>
+</html>
